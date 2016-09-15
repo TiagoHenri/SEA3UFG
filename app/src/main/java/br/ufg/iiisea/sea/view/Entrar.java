@@ -42,6 +42,7 @@ public class Entrar extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Entrar.this, EsqueciSenha.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -52,10 +53,10 @@ public class Entrar extends AppCompatActivity {
                 String senha = etSenha.getText().toString();
                 if(email.equalsIgnoreCase("") || senha.equalsIgnoreCase("")){
                     Toast.makeText(getApplicationContext(),
-                            getResources().getString(R.string.erroCampoVazio), Toast.LENGTH_SHORT).show();
+                            getResources().getString(R.string.erroCampoVazio), Toast.LENGTH_LONG).show();
                 } else if(senha.length() < 6) {
                     Toast.makeText(getApplicationContext(),
-                            getResources().getString(R.string.erroTamanhoSenha), Toast.LENGTH_SHORT).show();
+                            getResources().getString(R.string.erroTamanhoSenha), Toast.LENGTH_LONG).show();
                 } else {
                     progress = ProgressDialog.show(Entrar.this, getResources().getString(R.string.logando),
                             getResources().getString(R.string.aguarde), true);
@@ -78,7 +79,7 @@ public class Entrar extends AppCompatActivity {
                         public void handleFault(BackendlessFault backendlessFault) {
                             progress.dismiss();
                             Toast.makeText(getApplicationContext(),
-                                    backendlessFault.getMessage(), Toast.LENGTH_SHORT).show();
+                                    backendlessFault.getMessage(), Toast.LENGTH_LONG).show();
                         }
                     }, true);
                 }
