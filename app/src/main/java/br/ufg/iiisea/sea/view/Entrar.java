@@ -27,6 +27,7 @@ public class Entrar extends AppCompatActivity {
     private TextView tvEsqueceuSenha = null;
     private Button btnEntrar = null;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
