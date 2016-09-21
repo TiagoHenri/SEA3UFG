@@ -10,9 +10,14 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/MyMaterialTheme" >
         <activity
             android:name=".view.Inicio"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".view.EntrarActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
@@ -22,23 +27,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.Entrar"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar" >
-        </activity>
-        <activity
             android:name=".view.Registrar"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name=".view.EsqueciSenha"
+            android:name=".view.EsqueciSenhaActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-        <activity android:name=".view.Home" >
-        </activity>
-        <activity android:name=".view.SplashScreen" >
+        <activity
+            android:name=".view.Home"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 

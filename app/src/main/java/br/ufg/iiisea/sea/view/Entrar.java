@@ -27,12 +27,10 @@ public class Entrar extends AppCompatActivity {
     private TextView tvEsqueceuSenha = null;
     private Button btnEntrar = null;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_entrar);
-
         etEmail = (EditText) findViewById(R.id.etLoginEmail);
         etSenha = (EditText) findViewById(R.id.etLoginSenha);
         tvEsqueceuSenha = (TextView) findViewById(R.id.tvLoginEsqueciSenha);

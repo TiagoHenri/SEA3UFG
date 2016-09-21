@@ -34,7 +34,7 @@ public class InitialConfig extends Application {
 
         String userToken = Backendless.UserService.loggedInUser();
         if(userToken != null && !userToken.equals("")){
-            Log.e("UserToken", userToken);
+            //Log.e("UserToken", userToken);
             isLogged = true;
             Backendless.UserService.findById(userToken, new AsyncCallback<BackendlessUser>() {
                 @Override
@@ -47,9 +47,9 @@ public class InitialConfig extends Application {
 
                 @Override
                 public void handleFault(BackendlessFault backendlessFault) {
-                    Log.e("Backendless ERROR", backendlessFault.getMessage());
+                    //Log.e("Backendless ERROR", backendlessFault.getMessage());
                     Toast.makeText(getApplicationContext(),
-                            backendlessFault.getMessage(), Toast.LENGTH_SHORT).show();
+                            backendlessFault.getMessage(), Toast.LENGTH_LONG).show();
                 }
             });
         }
