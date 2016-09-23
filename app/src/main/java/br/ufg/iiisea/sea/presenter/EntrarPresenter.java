@@ -6,6 +6,6 @@ package br.ufg.iiisea.sea.presenter;
 public interface EntrarPresenter extends EntrarCallback {
 
     void esqueceuSenha();
-    void validaLogin(String email, String Senha);
+    void validaLogin(String email, String senha);
     void onDestroy();
 }

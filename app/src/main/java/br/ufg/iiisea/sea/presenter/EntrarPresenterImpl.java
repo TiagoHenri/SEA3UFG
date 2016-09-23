@@ -1,17 +1,16 @@
 package br.ufg.iiisea.sea.presenter;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import br.ufg.iiisea.sea.R;
 import br.ufg.iiisea.sea.interactor.EntrarInteractor;
 import br.ufg.iiisea.sea.interactor.EntrarInteractorImpl;
-import br.ufg.iiisea.sea.utils.PresenterGeneric;
+import br.ufg.iiisea.sea.utils.PresenterAbstract;
 import br.ufg.iiisea.sea.view.*;
 
 /**
  * Created by fellipe on 20/09/16.
  */
-public class EntrarPresenterImpl extends PresenterGeneric implements EntrarPresenter, EntrarCallback.OnLoginListener {
+public class EntrarPresenterImpl extends PresenterAbstract implements EntrarPresenter, EntrarCallback.OnLoginListener {
 
     private EntrarInteractor interactor;
     private EntrarView view;

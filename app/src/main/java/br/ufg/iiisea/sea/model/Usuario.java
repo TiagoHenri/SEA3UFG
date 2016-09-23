@@ -5,4 +5,5 @@ package br.ufg.iiisea.sea.model;
 public class Usuario {
 
 
+
 }

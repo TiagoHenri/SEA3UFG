@@ -1,21 +1,15 @@
 package br.ufg.iiisea.sea.presenter;
 
-import android.app.ProgressDialog;
-import android.widget.Toast;
 import br.ufg.iiisea.sea.R;
 import br.ufg.iiisea.sea.interactor.EsqueciSenhaInteractor;
 import br.ufg.iiisea.sea.interactor.EsqueciSenhaInteractorImpl;
-import br.ufg.iiisea.sea.utils.PresenterGeneric;
-import br.ufg.iiisea.sea.view.EsqueciSenha;
+import br.ufg.iiisea.sea.utils.PresenterAbstract;
 import br.ufg.iiisea.sea.view.EsqueciSenhaView;
-import com.backendless.Backendless;
-import com.backendless.async.callback.AsyncCallback;
-import com.backendless.exceptions.BackendlessFault;
 
 /**
  * Created by fellipe on 21/09/16.
  */
-public class EsqueciSenhaPresenterImpl extends PresenterGeneric implements EsqueciSenhaPresenter, EsqueciSenhaCallback.OnEsqueciSenhaListener {
+public class EsqueciSenhaPresenterImpl extends PresenterAbstract implements EsqueciSenhaPresenter, EsqueciSenhaCallback.OnEsqueciSenhaListener {
 
     private EsqueciSenhaInteractor interactor;
     private EsqueciSenhaView view;

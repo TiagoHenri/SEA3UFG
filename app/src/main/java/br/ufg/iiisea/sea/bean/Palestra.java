@@ -7,6 +7,9 @@ import java.util.Date;
  * Created by fellipe on 14/09/16.
  */
 public class Palestra {
+    public enum Tipo {
+
+    }
 
     private String nome;
     private String descricao;
@@ -14,6 +17,7 @@ public class Palestra {
     private Programacao programacao;
     private Date hora_inicio;
     private Date hora_fim;
-    private ArrayList<Palestrante> palestrantes;
+//    private ArrayList<Palestrante> palestrantes;
+    private Tipo tipo;
 
 }
