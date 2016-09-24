@@ -15,8 +15,8 @@ import java.util.List;
 public abstract class AbstractDAO<T> {
     public abstract String getTableName();
     public abstract String getKeyPrimaryColumnName();
-    public abstract String getSQLCreateEntries();
-    public abstract String getSQLDeleteEntries();
+//    public abstract String getSQLCreateEntries();
+//    public abstract String getSQLDeleteEntries();
     public abstract T toEntity(ContentValues contentValues);
     public abstract ContentValues toContentValues(T entity);
 
@@ -42,7 +42,6 @@ public abstract class AbstractDAO<T> {
     }
 
     public T getByKeyPrimary(int key) {
-
         String queryOne = "SELECT * FROM " +
                 getTableName() + " WHERE " +
                 getKeyPrimaryColumnName() + " = " + key;

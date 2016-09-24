@@ -15,41 +15,41 @@ public class UsuarioDAO extends AbstractDAO<Usuario> {
 
     @Override
     public String getTableName() {
-        return DBContract.UsuarioEntry.TABLE_NAME;
+        return DBEntries.UsuarioEntry.TABLE_NAME;
     }
 
     @Override
     public String getKeyPrimaryColumnName() {
-        return DBContract.UsuarioEntry.COLUMN_ID;
+        return DBEntries.UsuarioEntry.COLUMN_ID;
     }
 
-    @Override
-    public String getSQLCreateEntries() {
-        return DBContract.UsuarioEntry.SQL_CREATE_ENTRIES;
-    }
-
-    @Override
-    public String getSQLDeleteEntries() {
-        return DBContract.UsuarioEntry.SQL_DELETE_ENTRIES;
-    }
+//    @Override
+//    public String getSQLCreateEntries() {
+//        return DBEntries.UsuarioEntry.SQL_CREATE_ENTRIES;
+//    }
+//
+//    @Override
+//    public String getSQLDeleteEntries() {
+//        return DBEntries.UsuarioEntry.SQL_DELETE_ENTRIES;
+//    }
 
     @Override
     public Usuario toEntity(ContentValues contentValues) {
         Usuario entity = new Usuario();
-        entity.setId(contentValues.getAsInteger(DBContract.UsuarioEntry.COLUMN_ID));
-        entity.setEmail(contentValues.getAsString(DBContract.UsuarioEntry.COLUMN_NAME_EMAIL));
-        entity.setNome(contentValues.getAsString(DBContract.UsuarioEntry.COLUMN_NAME_NOME));
-        entity.setSenha(contentValues.getAsString(DBContract.UsuarioEntry.COLUMN_NAME_SENHA));
+        entity.setId(contentValues.getAsInteger(DBEntries.UsuarioEntry.COLUMN_ID));
+        entity.setEmail(contentValues.getAsString(DBEntries.UsuarioEntry.COLUMN_NAME_EMAIL));
+        entity.setNome(contentValues.getAsString(DBEntries.UsuarioEntry.COLUMN_NAME_NOME));
+        entity.setSenha(contentValues.getAsString(DBEntries.UsuarioEntry.COLUMN_NAME_SENHA));
         return entity;
     }
 
     @Override
     public ContentValues toContentValues(Usuario entity) {
         ContentValues contentValues = new ContentValues();
-        contentValues.put(DBContract.UsuarioEntry.COLUMN_ID, entity.getId());
-        contentValues.put(DBContract.UsuarioEntry.COLUMN_NAME_EMAIL, entity.getEmail());
-        contentValues.put(DBContract.UsuarioEntry.COLUMN_NAME_NOME, entity.getNome());
-        contentValues.put(DBContract.UsuarioEntry.COLUMN_NAME_SENHA, entity.getSenha());
+        contentValues.put(DBEntries.UsuarioEntry.COLUMN_ID, entity.getId());
+        contentValues.put(DBEntries.UsuarioEntry.COLUMN_NAME_EMAIL, entity.getEmail());
+        contentValues.put(DBEntries.UsuarioEntry.COLUMN_NAME_NOME, entity.getNome());
+        contentValues.put(DBEntries.UsuarioEntry.COLUMN_NAME_SENHA, entity.getSenha());
         return contentValues;
     }
 }

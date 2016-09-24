@@ -1,13 +1,15 @@
 package br.ufg.iiisea.sea.bean;
 
+import br.ufg.iiisea.sea.utils.ListableBean;
+
 import java.util.Date;
 
 /**
  * Created by fellipe on 22/09/16.
  */
-public class Noticia {
+public class Noticia implements ListableBean {
 
-    private int id;
+    private long id;
     private String titulo;
     private Date data;
     private String conteudo;
@@ -17,18 +19,28 @@ public class Noticia {
 
     }
 
-    public Noticia(int id, String titulo, Date data, String conteudo) {
+    public Noticia(long id, String titulo) {
         this.id = id;
         this.titulo = titulo;
+    }
+
+    public Noticia(int id, String titulo, Evento evento, Date data, String conteudo) {
+        this.id = id;
+        this.titulo = titulo;
+        this.evento = evento;
         this.data = data;
         this.conteudo = conteudo;
     }
 
-    public int getId() {
+    public Noticia(int id) {
+        this.id = id;
+    }
+
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 

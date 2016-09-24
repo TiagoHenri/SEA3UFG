@@ -8,7 +8,24 @@ import java.util.Date;
  */
 public class Palestra {
     public enum Tipo {
-
+        PALESTRA {
+            public int getId() {
+                return 1;
+            }
+            @Override
+            public String toString() {
+                return "Palestra";
+            }
+        },
+        MINICURSO {
+            public int getId() {
+                return 0;
+            }
+            @Override
+            public String toString() {
+                return "Minicurso";
+            }
+        }
     }
 
     private String nome;
